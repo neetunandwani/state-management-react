@@ -1,0 +1,130 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            background-color: green;
+            position: relative;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        div {
+            background-color: blue;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 100px;
+            height: 100px;
+        }
+
+        p {
+            background-color: red;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0;
+        }
+
+        body {
+            line-height: 25px;
+            font-size: 16px;
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript">
+
+      // window.location = "http://newhost/newpath/newfile.html";
+      // location.href = "http://newhost/newpath/newfile.html";
+    </script>
+
+    <script type="application/javascript">
+        function addNode() {
+        //     var pelement = document.createElement("p");
+        //     var textInput = document.createTextNode("this is test input");
+        //     pelement.appendChild(textInput);
+        //     document.getElementById("root").innerText = "<p>dfcvgbhjn</p>";
+        //     document.getElementById("root").appendChild(pelement);
+        //     var obj = {a: 3, b: 5}
+        //     delete obj.a
+        //     // document.write ("I m a 'good\" boy")
+        //     var cloths = ["Shirt", "Pant", "TShirt"];
+        //     cloths.pop();
+        //     var range=[]
+        //     for (let i = 0; i < 100; i++) {
+        //         range.push(i+1)
+        //     }
+        //     delete  range[6];
+        //     delete  range[99];
+        //     for (let i = 0; i < 100; i++) {
+        //         if(range[i] !==i+1){
+        //             console.log((i+1) + " is missing")
+        //         }
+        //     }
+        //
+        //     var numbers = [10, 20, 30, 40, 50];
+        //
+        //     for (let rangeKey in numbers) {
+        //         console.log(rangeKey)
+        //     }
+        //
+        //     for(let x in numbers ) {
+        //         if( numbers[x] === 30 ) {
+        //             continue;
+        //         }
+        //         console.log(numbers[x]);
+        //     }
+        //
+        }
+    </script>
+</head>
+<body>
+<!--<div id="root">test</div>-->
+<!--<div onclick="alert('The handler!')">-->
+<!--    <em>click me</em>-->
+<!--</div>-->
+
+<h4 id="h4">test</h4>
+<form id="form">
+    Form
+    <div>
+        Div
+        <p onclick="event.stopImmediatePropagation()">P</p>
+    </div>
+</form>
+<!--    <p onclick="alert('The handler P !')">-->
+<!--        <em>If you click on <code>EM</code>, the handler on <code>DIV</code> runs.</em>-->
+
+<!--    </p>-->
+
+<script type="application/javascript">
+    setTimeout(function () {
+        console.log("2")
+    }, 10)
+    setTimeout(addNode, 0)
+    console.log("1" === 1)
+    // console.log(pelement)
+    // setInterval(function (){console.log("2h")},-1)
+   form.onclick = function(event) {
+        // chrome needs some time to paint yellow
+        setTimeout(() => {
+            var h4=document.getElementById("h4");
+            var newElement =document.createTextNode("target = " + event.target.tagName + ", this=" + this.tagName);
+            document.getElementById("h4").innerText="target = " + event.target.tagName + ", this=" + this.tagName;
+
+        }, 10);
+    };
+
+
+
+
+</script>
+</body>
+
+</html>
